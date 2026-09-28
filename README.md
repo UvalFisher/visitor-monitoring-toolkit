@@ -4,21 +4,37 @@ Python tools developed as part of an M.Sc. research project in Mapping and Geoin
 
 The toolkit supports processing and analysis of visitor-monitoring data collected in outdoor environments. It combines BLE-derived visits with manual observations and other counting sensors, and provides tools for calibration, temporal analysis, dwell-time analysis, directional summaries, and occupancy estimation.
 
-## Example outputs
+## Research results and example insights
 
-The visualizations below use **synthetic demonstration data only**. They illustrate the types of outputs produced by the analysis tools and do not represent research participants or field observations.
+The figures below show selected outputs from the field research and illustrate how the monitoring workflow moves from sensor validation to temporal and spatial analysis of visitor activity.
 
-### Hourly visitor volume
+### Validation and calibration
 
-![Synthetic hourly visitor volume](assets/hourly_volume.svg)
+Calibration against manual observations substantially reduced the counting error. In the final external-antenna configuration, the mean absolute percentage error (MAPE) decreased from **7.6% before calibration to 3.1% after calibration**.
 
-### Directional patterns
+![BLE calibration error](assets/ble_calibration_error.png)
 
-![Synthetic reconstructed visits by direction](assets/direction_counts.svg)
+### Comparison with independent counters
 
-### Dwell time
+Longer-term measurements were compared with independent infrared (IR) and pressure counters. The cumulative directional counts show similar overall patterns across the three sensing approaches while also illustrating differences in absolute detection levels.
 
-![Synthetic dwell time by visit](assets/dwell_time.svg)
+![Cumulative directional counts from BLE, IR, and pressure sensors](assets/multi_sensor_directional_counts.png)
+
+### Temporal visitor patterns
+
+Continuous monitoring revealed clear differences between weekdays and Saturdays. Saturday activity was substantially higher, while both day types showed their main activity period around midday.
+
+![Average hourly visitor volume by day type](assets/hourly_visitor_volume.png)
+
+### Spatial visitor-flow patterns
+
+Combining directional observations from multiple monitoring locations makes it possible to move beyond point counts toward spatial interpretation of trail use. The example below compares movement along the Red and Green trails on weekdays and Saturdays.
+
+![Combined visitor flow along the Red and Green trails](assets/combined_visitor_flow.png)
+
+### Synthetic code demo
+
+The repository also includes a small fully synthetic dataset for demonstrating the processing pipeline without distributing research observations. The synthetic SVG outputs in `assets/` correspond to that demo and are separate from the field-research figures above.
 
 ## What is included
 
