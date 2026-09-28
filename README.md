@@ -4,6 +4,22 @@ Python tools developed as part of an M.Sc. research project in Mapping and Geoin
 
 The toolkit supports processing and analysis of visitor-monitoring data collected in outdoor environments. It combines BLE-derived visits with manual observations and other counting sensors, and provides tools for calibration, temporal analysis, dwell-time analysis, directional summaries, and occupancy estimation.
 
+## Example outputs
+
+The visualizations below use **synthetic demonstration data only**. They illustrate the types of outputs produced by the analysis tools and do not represent research participants or field observations.
+
+### Hourly visitor volume
+
+![Synthetic hourly visitor volume](assets/hourly_volume.svg)
+
+### Directional patterns
+
+![Synthetic reconstructed visits by direction](assets/direction_counts.svg)
+
+### Dwell time
+
+![Synthetic dwell time by visit](assets/dwell_time.svg)
+
 ## What is included
 
 ### BLE processing (`src/ble_processing.py`)
