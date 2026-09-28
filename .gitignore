@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.DS_Store
+*.xlsx
+*.xls
+# Keep research/raw datasets out of the public repository
+data/
+outputs/
